@@ -5,10 +5,10 @@ def apart(txt):
     print('=' * size)
 
 
-def validateTrng(txtVal):
+def validate_trng(txt_val):
     while True:
         try:
-            val = int(input(txtVal))
+            val = int(input(txt_val))
         except (ValueError, TypeError):
             print('\033[31mDado inválido, tente novamente.\033[m')
             continue
@@ -21,10 +21,10 @@ def validateTrng(txtVal):
     return val
 
 
-def validateDmd(txtVal):
+def validate_dmd(txt_val):
     while True:
         try:
-            val = int(input(txtVal))
+            val = int(input(txt_val))
         except (ValueError, TypeError):
             print('\033[31mDado inválido, tente novamente.\033[m')
         else:
@@ -36,14 +36,14 @@ def validateDmd(txtVal):
     return val
 
 
-def printTrng(x):
+def print_trng(x):
     for c in range(0, x):
         for i in range(0, c + 1):
             print('*', end='  ')
         print()
 
 
-def printDmd(z):
+def print_dmd(z):
     space = z // 2
     symbols = z % 2
     for c in range(0, z):
