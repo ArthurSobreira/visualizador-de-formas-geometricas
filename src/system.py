@@ -8,7 +8,7 @@ def main():
         choice = select_form('[Quadrado] [Losango] [Triangulo]: ')
         if choice == 'quadrado':
             side = select_side('qua')
-            print_qua(side)
+            print_squa(side)
         if choice == 'losango':
             side = select_side('los')
             print_los(side)

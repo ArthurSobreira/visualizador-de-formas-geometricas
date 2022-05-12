@@ -59,7 +59,7 @@ def select_side(form):
                     return val
 
 
-def print_qua(side):
+def print_squa(side):
     print()
     if side > 16:
         size = side * 3
