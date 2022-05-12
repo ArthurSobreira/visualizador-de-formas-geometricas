@@ -16,7 +16,7 @@ def main():
     print()
     print('======== Triângulo Retângulo ========')
     print_trng(x)
-    print('============ Losango ============ ')
+    print('============== Losango ============== ')
     print_dmd(z)
     apart('Fim do Programa, Volte Sempre!!')
 
