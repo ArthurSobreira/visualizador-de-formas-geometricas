@@ -2,23 +2,36 @@ from functions import *
 
 
 def main():
-    apart('Visualizador de Formas Geométricas')
-    print('Dados para visualizar o Triângulo:')
-    print()
+    apart('Visualizador de Formas Geométicas', 46)
+    form()
     while True:
-        x = validate_trng('Vértice no eixo X: ')
-        y = validate_trng('Vértice no eixo Y: ')
-        if x == y:
+        choice = select_form('[Quadrado] [Losango] [Triangulo]: ')
+        if choice == 'quadrado':
+            side = select_side('qua')
+            print_qua(side)
+        if choice == 'losango':
+            side = select_side('los')
+            print_los(side)
+        if choice == 'triangulo':
+            form_tri()
+            while True:
+                tri = int(input('Selecione o Triângulo: '))
+                if tri == 1:
+                    side = select_side('tri_1')
+                    print_tri_1(side)
+                    break
+                if tri == 2:
+                    side = select_side('tri_2')
+                    print_tri_2(side)
+                    break
+                else:
+                    print('\033[31mDado Inválido, Tente Novamente!!\033[m')
+                    continue
+        cont = str(input('Deseja continuar? [S/N] ')).strip().upper()[0]
+        print()
+        if cont == 'N':
             break
-        print('\033[31mÉ necessário que os vértices possuam o mesmo valor.\033[m')
-    print()
-    z = validate_dmd('Dados para visualizar o Losango: ')
-    print()
-    print('======== Triângulo Retângulo ========')
-    print_trng(x)
-    print('============== Losango ============== ')
-    print_dmd(z)
-    apart('Fim do Programa, Volte Sempre!!')
+    apart('Fim do Programa, Volte Sempre!!!', 41)
 
 
 if __name__ == '__main__':
